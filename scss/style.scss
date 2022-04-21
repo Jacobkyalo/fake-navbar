@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+
+  body {
+    position: relative;
+
+    .container {
+      width: 70%;
+      margin: 0px auto;
+
+      .navbar {
+        height: 10vh;
+        background-color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        font-size: 2rem;
+
+        a {
+          text-decoration: none;
+          color: #0bb90b;
+        }
+      }
+      ul {
+        list-style: none;
+        display: flex;
+
+        li {
+          padding-right: 1rem;
+        }
+        a {
+          text-decoration: none;
+          text-transform: capitalize;
+          font-size: 1.2rem;
+          color: #000;
+
+          &:hover {
+            color: #0bb90b;
+          }
+        }
+        .login-btn {
+          background-color: #0bb90b;
+          padding: 6px 18px;
+          border-radius: 2rem;
+
+          &:hover {
+            background-color: transparent;
+            border: 2px solid #0bb90b;
+            color: #000;
+          }
+        }
+      }
+    }
+
+    .btn {
+      position: absolute;
+      top: 15px;
+      right: 60px;
+      font-size: 1.2rem;
+      background-color: #0bb90b;
+      outline: 0;
+      border: 1px solid #000;
+      border-radius: 3px;
+      padding: 3px;
+      display: none;
+    }
+    .toggle-menu {
+      background-color: rgba(14, 13, 13, 0.9);
+      width: 18rem;
+      position: absolute;
+      top: 20px;
+      right: 10px;
+      display: none;
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30px;
+
+        li {
+          padding: 30px 0;
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+      #close {
+        position: absolute;
+        top: 10px;
+        right: 30px;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+    @media (max-width: 800px) {
+      .navbar .links {
+        display: none;
+      }
+      .btn {
+        display: block;
+      }
+    }
+  }
+}
